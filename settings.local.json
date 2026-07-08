@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(extract-text dados-relatorio-byd-diretoria-viamar.xlsx)",
+      "Bash(python -c ' *)",
+      "WebFetch(domain:stroke.ag)",
+      "Bash(rm logo_b64.txt)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)"
+    ]
+  }
+}
