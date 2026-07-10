@@ -205,6 +205,20 @@
   .crea .cmet .n{font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums}
   .crea .cmet .n.acc{color:var(--accent)}
   .crea .cmet .l{font-size:.72rem;color:var(--muted)}
+  /* comparativo maio vs junho */
+  .compare{display:flex;flex-direction:column;gap:1.4rem;margin-top:.5rem}
+  .crow{display:grid;grid-template-columns:1.1fr auto 1fr auto 1fr auto;align-items:center;gap:1.2rem;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.6rem 2rem;box-shadow:var(--shadow)}
+  .crow .clabel{font-size:1.1rem;font-weight:700}
+  .crow .cmo{text-align:center}
+  .crow .cmo .cm-n{font-size:2.2rem;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .crow .cmo .cm-l{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+  .crow .carr{font-size:1.6rem;color:var(--line)}
+  .crow .cdelta{font-size:1.6rem;font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+  .crow.up .cdelta{color:var(--accent)}
+  .crow.up .cmo:last-of-type .cm-n{color:var(--accent)}
+  .crow.down .cdelta{color:var(--text)}
+  .crow.down{border-color:var(--text)}
   .cover-logo{height:60px;margin-bottom:2.6rem;align-self:flex-start}
 </style>
 </head>
@@ -319,6 +333,31 @@
     </div>
   </div>
   <p class="sub">Fonte: CRM Leadmob · venda por origem, junho 2026.</p>
+</section>
+
+<!-- 5 · MAIS LEADS, MENOS VENDAS -->
+<section class="slide">
+  <div class="kicker">Maio vs. junho</div>
+  <h2>Mais leads chegaram. <em>As vendas caíram.</em></h2>
+  <div class="compare">
+    <div class="crow up">
+      <div class="clabel">Leads de mídia</div>
+      <div class="cmo"><div class="cm-n">2.770</div><div class="cm-l">Maio</div></div>
+      <div class="carr">→</div>
+      <div class="cmo"><div class="cm-n">5.007</div><div class="cm-l">Junho</div></div>
+      <div class="carr"></div>
+      <div class="cdelta">+81%</div>
+    </div>
+    <div class="crow down">
+      <div class="clabel">Vendas no mês</div>
+      <div class="cmo"><div class="cm-n">320</div><div class="cm-l">Maio</div></div>
+      <div class="carr">→</div>
+      <div class="cmo"><div class="cm-n">233</div><div class="cm-l">Junho</div></div>
+      <div class="carr"></div>
+      <div class="cdelta">−27%</div>
+    </div>
+  </div>
+  <p class="sub">A mídia entregou 81% mais leads em junho que em maio. O que acontece do lead à venda é a etapa comercial, no showroom.</p>
 </section>
 
 <!-- 5 · 3 NÚMEROS -->
@@ -466,35 +505,35 @@
 <!-- CRIATIVOS · TOP 5 -->
 <section class="slide">
   <div class="kicker">Geração de lead por criativo</div>
-  <h2>Os 5 criativos que <em>mais geraram leads</em> em junho</h2>
+  <h2>Os 5 criativos de 0km que <em>mais geraram leads</em> em junho</h2>
   <div class="ranks">
     <div class="rank">
       <div class="rpos">1</div>
-      <div class="rbody"><span class="rname">Move Brasil</span><span class="rtag">Campanha geral</span><div class="rbar" style="width:100%"></div></div>
-      <div class="rnum"><div class="rl">683</div><div class="rc">CPL R$ 1,60</div></div>
-    </div>
-    <div class="rank">
-      <div class="rpos">2</div>
-      <div class="rbody"><span class="rname">King GL</span><span class="rtag">Vendas diretas · PCD</span><div class="rbar" style="width:73.5%"></div></div>
-      <div class="rnum"><div class="rl">502</div><div class="rc">CPL R$ 4,69</div></div>
-    </div>
-    <div class="rank">
-      <div class="rpos">3</div>
-      <div class="rbody"><span class="rname">Song Pro GL e King GL</span><span class="rtag">Vendas diretas · Táxi</span><div class="rbar" style="width:57.1%"></div></div>
-      <div class="rnum"><div class="rl">390</div><div class="rc">CPL R$ 6,21</div></div>
-    </div>
-    <div class="rank">
-      <div class="rpos">4</div>
-      <div class="rbody"><span class="rname">King GS 2026</span><span class="rtag">Santo André</span><div class="rbar" style="width:56.5%"></div></div>
+      <div class="rbody"><span class="rname">King GS 2026</span><span class="rtag">Santo André</span><div class="rbar" style="width:100%"></div></div>
       <div class="rnum"><div class="rl">386</div><div class="rc">CPL R$ 3,13</div></div>
     </div>
     <div class="rank">
-      <div class="rpos">5</div>
-      <div class="rbody"><span class="rname">Dolphin GS 2027</span><span class="rtag">Santo André</span><div class="rbar" style="width:48.8%"></div></div>
+      <div class="rpos">2</div>
+      <div class="rbody"><span class="rname">Dolphin GS 2027</span><span class="rtag">Santo André</span><div class="rbar" style="width:86.3%"></div></div>
       <div class="rnum"><div class="rl">333</div><div class="rc">CPL R$ 3,12</div></div>
     </div>
+    <div class="rank">
+      <div class="rpos">3</div>
+      <div class="rbody"><span class="rname">Song Pro GL</span><span class="rtag">São Bernardo</span><div class="rbar" style="width:81.3%"></div></div>
+      <div class="rnum"><div class="rl">314</div><div class="rc">CPL R$ 2,76</div></div>
+    </div>
+    <div class="rank">
+      <div class="rpos">4</div>
+      <div class="rbody"><span class="rname">King GS 2026</span><span class="rtag">São Caetano</span><div class="rbar" style="width:76.7%"></div></div>
+      <div class="rnum"><div class="rl">296</div><div class="rc">CPL R$ 3,81</div></div>
+    </div>
+    <div class="rank">
+      <div class="rpos">5</div>
+      <div class="rbody"><span class="rname">King GS 2026</span><span class="rtag">São Bernardo</span><div class="rbar" style="width:70.7%"></div></div>
+      <div class="rnum"><div class="rl">273</div><div class="rc">CPL R$ 2,94</div></div>
+    </div>
   </div>
-  <p class="sub">Leads gerados no mês, por criativo. Fonte: Meta Ads, junho 2026. Inclui campanhas de vendas diretas e a campanha geral Move Brasil, além das campanhas por loja.</p>
+  <p class="sub">Leads gerados no mês pelos criativos de varejo (0km), por loja. Fonte: Meta Ads, junho 2026.</p>
 </section>
 
 
