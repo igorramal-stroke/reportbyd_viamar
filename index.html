@@ -108,6 +108,14 @@
   .otable tr.digital td{background:var(--accent-dim);font-weight:700}
   .otable tr.total td{border-top:2px solid var(--text);border-bottom:none;font-weight:800;padding-top:.7rem}
   .otable .tag{display:inline-block;font-size:.68rem;background:var(--accent);color:#fff;border-radius:4px;padding:.1rem .4rem;margin-left:.5rem;vertical-align:middle;letter-spacing:.04em;font-weight:700}
+  /* grouped variant (comparativo maio/junho) */
+  .otable.grouped th.grp{text-align:center;color:var(--text);background:var(--bg2);font-weight:800;
+    border-bottom:1px solid var(--line);padding:.5rem .9rem}
+  .otable.grouped .grp-row th{border-bottom:1px solid var(--line)}
+  .otable .sep{border-left:2px solid var(--line)}
+  .otable td.vm{font-weight:700;color:var(--accent)}
+  .otable td.vm.pos{color:#15803d}
+  .otable td.vm-total{text-align:right;font-weight:800;color:#fff;background:var(--accent)}
   .split2{display:flex;gap:2rem;align-items:flex-start;margin-top:.3rem}
   .split2 .col-main{flex:1.4}
   .split2 .col-side{flex:1}
@@ -304,35 +312,30 @@
 <section class="slide">
   <div class="kicker">Panorama de junho</div>
   <h2>De onde vêm os leads do negócio</h2>
-  <div class="split2">
-    <div class="col-main">
-      <table class="otable">
-        <thead>
-          <tr><th>Origem do lead</th><th class="num">Leads gerados</th><th class="num">Vendas mai</th><th class="num">Vendas jun</th></tr>
-        </thead>
-        <tbody>
-          <tr class="digital"><td>Facebook <span class="tag">mídia</span></td><td class="num">2.900</td><td class="num">42</td><td class="num">19</td></tr>
-          <tr class="digital"><td>Site / Google <span class="tag">mídia</span></td><td class="num">2.219</td><td class="num">25</td><td class="num">10</td></tr>
-          <tr><td>Campanha Patrimônio</td><td class="num">1.200</td><td class="num">24</td><td class="num">32</td></tr>
-          <tr><td>Montadora</td><td class="num">1.280</td><td class="num">14</td><td class="num">11</td></tr>
-          <tr><td>Atend. ShowRoom</td><td class="num">970</td><td class="num">185</td><td class="num">154</td></tr>
-          <tr><td>Telefone</td><td class="num">30</td><td class="num">30</td><td class="num">7</td></tr>
-          <tr class="total"><td>Total</td><td class="num">8.599</td><td class="num">320</td><td class="num">233</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-side">
-      <div class="ctx-stat">
-        <div class="cs"><div class="n">60%</div><div class="l">dos leads vêm da mídia digital</div></div>
-        <div class="cs"><div class="n">5.119</div><div class="l">leads de mídia no mês</div></div>
-      </div>
-      <div class="insight">
-        <h4>O que a mídia entrega</h4>
-        <p>A mídia digital originou <strong>5.119 leads</strong> em junho, 60% de toda a oportunidade do negócio. A venda registrada como "ShowRoom" é auto-declarada no CRM: boa parte dessas 154 vendas começou num anúncio. Nosso papel é encher o funil. A conversão em venda acontece na etapa comercial.</p>
-      </div>
-    </div>
-  </div>
-  <p class="sub">Fonte: CRM Leadmob · venda por origem, junho 2026.</p>
+  <table class="otable grouped">
+    <thead>
+      <tr class="grp-row">
+        <th></th>
+        <th class="grp" colspan="3">Junho</th>
+        <th class="grp sep" colspan="2">Maio</th>
+      </tr>
+      <tr>
+        <th>Origem do lead</th>
+        <th class="num">Leads gerados</th><th class="num">Vendas</th><th class="num">% total</th>
+        <th class="num sep">Vendas</th><th class="num">Var. MoM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Atend. ShowRoom</td><td class="num">970</td><td class="num">154</td><td class="num">33,9%</td><td class="num sep">185</td><td class="num vm" style="background:rgba(254,24,23,.08)">−16%</td></tr>
+      <tr><td>Campanha Patrimônio</td><td class="num">1.200</td><td class="num">32</td><td class="num">10,7%</td><td class="num sep">24</td><td class="num vm pos" style="background:rgba(21,128,61,.1)">+33%</td></tr>
+      <tr class="digital"><td>Facebook <span class="tag">mídia</span></td><td class="num">2.900</td><td class="num">19</td><td class="num">7,3%</td><td class="num sep">42</td><td class="num vm" style="background:rgba(254,24,23,.24)">−54%</td></tr>
+      <tr class="digital"><td>Site / Google <span class="tag">mídia</span></td><td class="num">2.219</td><td class="num">10</td><td class="num">3,0%</td><td class="num sep">25</td><td class="num vm" style="background:rgba(254,24,23,.27)">−60%</td></tr>
+      <tr><td>Montadora</td><td class="num">1.280</td><td class="num">11</td><td class="num">4,7%</td><td class="num sep">14</td><td class="num vm" style="background:rgba(254,24,23,.1)">−21%</td></tr>
+      <tr><td>Telefone</td><td class="num">30</td><td class="num">7</td><td class="num">3,0%</td><td class="num sep">30</td><td class="num vm" style="background:rgba(254,24,23,.32)">−76%</td></tr>
+      <tr class="total"><td>Total</td><td class="num">8.599</td><td class="num">233</td><td class="num">100,0%</td><td class="num sep">320</td><td class="num vm-total">−27,2%</td></tr>
+    </tbody>
+  </table>
+  <p class="sub">Junho vendeu bem menos que maio em quase todos os canais. A mídia digital (Facebook + Site/Google) originou 5.119 leads no mês, 60% de toda a oportunidade. Fonte: CRM Leadmob, venda por origem.</p>
 </section>
 
 <!-- 5 · 3 NÚMEROS -->
